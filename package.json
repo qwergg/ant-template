@@ -9,6 +9,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "ant-design-vue": "^1.6.0",
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
@@ -23,9 +25,13 @@
     "@vue/cli-service": "^4.3.0",
     "@vue/test-utils": "1.0.0-beta.31",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.0",
     "chai": "^4.1.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.11.1",
+    "less-loader": "^6.1.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
