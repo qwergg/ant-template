@@ -23,18 +23,15 @@ const assetsCdn={
         vue: 'Vue',
         'vue-router': 'VueRouter',
         vuex: 'Vuex',
-        axios: 'axios',
-        'ant-design-vue': 'antd'
+        axios: 'axios'
       },
       css:[
-          'https://cdn.jsdelivr.net/npm/ant-design-vue@1.6.0/dist/antd.min.css'
       ],
       js: [
         'https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js',
         'https://cdn.jsdelivr.net/npm/vue-router@3.1.3/dist/vue-router.min.js',
         'https://cdn.jsdelivr.net/npm/vuex@3.1.1/dist/vuex.min.js',
-        'https://cdn.jsdelivr.net/npm/axios@0.19.0/dist/axios.min.js',
-        'https://cdn.jsdelivr.net/npm/ant-design-vue@1.6.0/dist/antd.min.js'
+        'https://cdn.jsdelivr.net/npm/axios@0.19.0/dist/axios.min.js'
       ]
 }
 
