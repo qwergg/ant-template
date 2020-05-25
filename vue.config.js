@@ -26,8 +26,9 @@ const assetsCdn={
         axios: 'axios',
         'ant-design-vue': 'antd'
       },
+    
       css:[
-          'https://cdn.jsdelivr.net/npm/ant-design-vue@1.6.0/dist/antd.min.css'
+        'https://cdn.jsdelivr.net/npm/ant-design-vue@1.6.0/dist/antd.min.css'
       ],
       js: [
         'https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js',
@@ -78,7 +79,7 @@ module.exports={
                 }
             }
         }
-
+       return {plugins}
     },
     chainWebpack : config=>{
        // webpack 会默认给commonChunk打进chunk-vendors，所以需要对webpack的配置进行delete

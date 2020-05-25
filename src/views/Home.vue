@@ -38,6 +38,9 @@ export default {
     return{
       collapsed:false
     }
+  },
+  mounted(){
+    console.log(23)
   }
 }
 </script>
