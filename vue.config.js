@@ -2,21 +2,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin') // 去掉注释
 
 const isProduction = process.env.NODE_ENV === 'production';//是否是生产环境
 const plugins = [];
-plugins.push(
-    new UglifyJsPlugin({
-        uglifyOptions: {
-            output: {
-                comments: false, // 去掉注释
-            },
-            warnings: false,
-            compress: {
-                drop_console: true,
-                drop_debugger: false,
-                pure_funcs: ['console.log'] //移除console
-            }
-        }
-    })
-)
+
 
 const assetsCdn={
     externals: {
@@ -56,7 +42,21 @@ module.exports={
     },
     configureWebpack: config=>{
         if(isProduction){
-            plugins
+            plugins.push(
+                new UglifyJsPlugin({
+                    uglifyOptions: {
+                        output: {
+                            comments: false, // 去掉注释
+                        },
+                        warnings: false,
+                        compress: {
+                            drop_console: true,
+                            drop_debugger: false,
+                            pure_funcs: ['console.log'] //移除console
+                        }
+                    }
+                })
+            )
         }
         config.externals=isProduction ? assetsCdn.externals : {}
         
