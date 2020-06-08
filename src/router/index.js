@@ -25,9 +25,21 @@ Vue.use(VueRouter)
             { 
               path:'userManage',
               name:'userManage',
-              meta:{title:'用户',icon:'user',role:['admin']},
+              meta:{title:'用户管理',icon:'user',role:['admin']},
               component:() => import('../views/About.vue')
-            }
+            },
+            {
+              path:'devManage',
+              name:'devManage',
+              meta:{title:'设备管理',icon:'user',role:['admin','super']},
+              component:()=>import('@/views/About.vue')
+          },
+          {
+              path:'liveManage',
+              name:'liveManage',
+              meta:{title:'直播管理',icon:'user',role:['admin','super']},
+              component:()=>import('@/views/About.vue')
+          }
           ]
         }
         
@@ -46,7 +58,7 @@ Vue.use(VueRouter)
 
 
 const router = new VueRouter({
-  mode: 'history',
+ 
   routes
 })
 

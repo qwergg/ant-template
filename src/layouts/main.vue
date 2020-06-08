@@ -1,10 +1,8 @@
 <template>
      <a-layout id="components-layout-demo-custom-trigger" :class="['layout_head']">
-
-     <left-menus/>
+    
+     <left-menus :menus="routeList" mode="inline"/>
      
-
-
     <a-layout>
       <a-layout-header style="background: #fff; padding: 0">
         <a-icon
@@ -17,6 +15,7 @@
 
       <a-layout-content :style="{ margin: '24px 16px 0',padding:'12px 24px', background: '#fff', minHeight: '100%' }">
       <router-view/>
+     
       </a-layout-content>
       
     </a-layout>
@@ -24,18 +23,22 @@
 </template>
 
 <script>
-
+import { mapState, mapGetters } from 'vuex';
 import leftMenus from '@/components/Menus/index';
 export default {
   name: 'Main',
   components:{leftMenus},
   data(){
     return{
-      
+      collapsed:false
     }
   },
   mounted(){
     console.log(23)
+    console.log(this.routeList)
+  },
+  computed:{
+    ...mapGetters(['routeList'])
   }
 }
 </script>

@@ -15,13 +15,26 @@ const asyncRoute=[
             {
                 path:'/user',
                 name:'User',
+                meta:{title:'用户系统',icon:'user',role:['admin']},
                 redirect: '/user/userManage',
                 component:RouterView,
                 children:[
                     {
-                        path:'/userManage',
+                        path:'userManage',
                         name:'userManage',
                         meta:{title:'用户管理',icon:'user',role:['admin','super']},
+                        component:()=>import('@/views/About.vue')
+                    },
+                    {
+                        path:'devManage',
+                        name:'devManage',
+                        meta:{title:'设备管理',icon:'user',role:['admin','super']},
+                        component:()=>import('@/views/About.vue')
+                    },
+                    {
+                        path:'liveManage',
+                        name:'liveManage',
+                        meta:{title:'直播管理',icon:'user',role:['admin','super']},
                         component:()=>import('@/views/About.vue')
                     }
                 ]
