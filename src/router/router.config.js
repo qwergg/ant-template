@@ -9,10 +9,16 @@ const asyncRoute=[
             {
                 path:'/home',
                 name:'Home',
-                meta:{title:'首页',icon:'user',role:['admin']},
+                meta:{title:'首页',icon:'home',role:['admin']},
                 component:() => import('@/views/Home.vue')
             },
             {
+                path:'/live',
+                name:'Live',
+                meta:{title:'直播管理',icon:'video-camera',role:['admin']},
+                component:() => import('@/views/Home.vue')
+            },
+            {    
                 path:'/user',
                 name:'User',
                 meta:{title:'用户系统',icon:'user',role:['admin']},
@@ -20,23 +26,18 @@ const asyncRoute=[
                 component:RouterView,
                 children:[
                     {
-                        path:'userManage',
+                        path:'/user/userManage',
                         name:'userManage',
                         meta:{title:'用户管理',icon:'user',role:['admin','super']},
                         component:()=>import('@/views/About.vue')
                     },
                     {
-                        path:'devManage',
+                        path:'/user/devManage',
                         name:'devManage',
-                        meta:{title:'设备管理',icon:'user',role:['admin','super']},
-                        component:()=>import('@/views/About.vue')
-                    },
-                    {
-                        path:'liveManage',
-                        name:'liveManage',
-                        meta:{title:'直播管理',icon:'user',role:['admin','super']},
+                        meta:{title:'设备管理',icon:'laptop',role:['admin','super']},
                         component:()=>import('@/views/About.vue')
                     }
+                    
                 ]
             }
           ]
