@@ -15,7 +15,6 @@
             <span slot="title"><a-icon :type="item.meta.icon || '' " /><span>{{item.meta.title}}</span></span>
             <a-menu-item  v-for="menu in item.children" :key="menu.name">
               <router-link :to="menu.path">
-                
                 <a-icon :type="menu.meta.icon"/>
                 <span>{{menu.meta.title}}</span>
               </router-link>
@@ -49,10 +48,6 @@ export default {
            required:false
        }
    },
-   mounted(){
-    
-  
-   },
    computed:{
      menusList(){
        return this.menus[0].children
@@ -61,10 +56,10 @@ export default {
          const route = this.$route.matched;
          const currentName = this.$route.name;
          const openKey = route.filter(item=>{
-              currentName===item.name
+              return item.name === currentName
          })
+        
         return [openKey[0].parent.name]
-       
      }
    }
  
