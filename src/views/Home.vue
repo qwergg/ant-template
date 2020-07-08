@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   home
+   home页面部分
   </div>
 </template>
 
