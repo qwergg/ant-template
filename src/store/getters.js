@@ -1,6 +1,6 @@
 const getters={
     role :state =>state.roles,
-    routeList : state=> state.permission.routeList
+    routeList : state=> state.premission.routeList
 }
 
 
