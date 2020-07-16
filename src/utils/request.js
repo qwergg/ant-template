@@ -56,4 +56,29 @@ const err = (error) => { //err
   }, err)
 
 
+const vueAxios = {
+  install(Vue,axios){
+    if(this.installed){
+      return;
+    }
+    this.installed = true;
+    if(!axios){
+      console.error('请先下载axios');
+      return;
+    }
+   Object.defineProperties(Vue.prototype,{
+       $axios:{
+         get:()=>{
+           return axios
+         }
+       }
+   })
+
+  }
+}
+export { 
+  vueAxios,
+  service as axios
+}
 export default service
+

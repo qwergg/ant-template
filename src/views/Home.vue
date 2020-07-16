@@ -1,6 +1,7 @@
 <template>
   <div class="home">
    home页面部分
+  
   </div>
 </template>
 
@@ -15,11 +16,26 @@ export default {
   },
   data(){
     return{
-      collapsed:false
+      collapsed:false,
+      user:''
     }
   },
   mounted(){
-    console.log(23)
+    // this.$axios.get('https://platform.sen-cloud.com.cn/elws1/services/authapi/getOrganList',{
+    //   params:{
+    //     senderId:'',
+    //     secToken:1,
+    //     response:'application/json'
+    //   }
+      
+    // }).then(r=>{
+    //   console.log(r)
+    // }).catch(err=>{
+    //   console.log(err)
+    // })
+  },
+  methods:{
+   
   }
 }
 </script>
